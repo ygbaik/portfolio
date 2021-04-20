@@ -8,7 +8,8 @@
 
     <link rel="stylesheet" href="https://use.typekit.net/zng6zgr.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="icon" type="image/svg" href="img/favicon.svg" />
 </head>
 
 <body>
@@ -27,7 +28,6 @@
                     <ul>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="style-guide.html">Style Guide</a></li>
                     </ul>
                 </nav>
             </div>
@@ -42,14 +42,16 @@
             </div>
 
             <div class="linkedin-button grid-border">
-                <span><a href="https://www.linkedin.com/in/david-baik-856157178/">Linkedin</a></span>
+                <span><a href="https://www.linkedin.com/in/david-baik-856157178/" target="_blank">Linkedin</a></span>
             </div>
 
             <div class="email-button grid-border">
-                <span><a href="mailto:ygbaik6@gmail.com">Email</a></span>
+                <span><a href="mailto:ygbaik6@gmail.com" target="_blank">Email</a></span>
             </div>
 
-            <div class="blank-div grid-border"></div>
+            <div class="resume-div grid-border">
+                <span><a href="img/david-baik-resume.pdf" target="_blank">Resume</a></span>
+            </div>
 
             <div class="nav-arrow">
                 <a href="#projects">
@@ -68,14 +70,14 @@
                 <div class="accordion-wrapper">
                     <input type="checkbox" name="project-accordion" id="ventura-future" class="accordion-input">
                     <label for="ventura-future" class="accordion-label">
-                        <div class="project-details">
-                            <h3>Ventura Future</h3>
-                            <p>(UX/UI microsite, Interaction Designer)</p>
-                        </div>
+                        <span class="project-details">
+                            Ventura Future
+                            <span class="project-role">(UX/UI microsite, Interaction Designer)</span>
+                        </span>
 
-                        <div class="project-date">
-                            <h3>2020</h3>
-                        </div>
+                        <span class="project-date">
+                            2020
+                        </span>
                     </label>
 
                     <div class="divider-line"></div>
@@ -98,12 +100,12 @@
 
                                 <a class="project-nav-button" href="ventura-future.html">
                                     <p>Project</p>
-                                    <img class="project-page-nav arrow-hover" src="img/arrow-down.png"
+                                    <img class="project-page-nav" src="img/arrow-down.png"
                                         alt="navigation arrow to ventura future project page">
                                 </a>
                             </div>
 
-                            <img class="content-image" src="img/ventura-future.gif">
+                            <img class="content-image" src="img/ventura-future.gif" alt="preview thumbnail of ventura future's microsite prototype">
                         </div>
                         <div class="divider-line"></div>
                     </div>
@@ -114,14 +116,14 @@
                 <div class="accordion-wrapper">
                     <input type="checkbox" name="project-accordion" id="dippd" class="accordion-input">
                     <label for="dippd" class="accordion-label">
-                        <div class="project-details">
-                            <h3>Dipp'd</h3>
-                            <p>(UX/UI website, Visual Designer/Front-end)</p>
-                        </div>
+                        <span class="project-details">
+                            Dipp'd
+                            <span class="project-role">(UX/UI website, Visual Designer/Front-end)</span>
+                        </span>
 
-                        <div class="project-date">
-                            <h3>2021</h3>
-                        </div>
+                        <span class="project-date">
+                            2021
+                        </span>
                     </label>
 
                     <div class="divider-line"></div>
@@ -139,12 +141,12 @@
 
                                 <a class="project-nav-button" href="dippd.html">
                                     <p>Project</p>
-                                    <img class="project-page-nav arrow-hover" src="img/arrow-down.png"
+                                    <img class="project-page-nav" src="img/arrow-down.png"
                                         alt="navigation arrow to ventura future project page">
                                 </a>
                             </div>
 
-                            <img class="content-image" src="img/dippd.gif">
+                            <img class="content-image" src="img/dippd.gif" alt="preview thumbnail of the dipp'd website">
                         </div>
                         <div class="divider-line"></div>
                     </div>
@@ -329,7 +331,7 @@
                 </div>
 
                 <div class="email-button-contact grid-border">
-                    <a href="mailto:ygbaik6@gmail.com">Email</a>
+                    <a href="mailto:ygbaik6@gmail.com" target="_blank">Email</a>
                 </div>
 
                 <!-- <div class="linkedin-arrow">
@@ -352,26 +354,32 @@
                 </div>
 
                 <div class="contact-image grid-border">
-                    <img src="img/contact-image.jpg">
+                    <img src="img/contact-image.jpg" alt="portrait image of David Baik">
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="main-footer">
         <div class="main-container">
-            <div class="update-date">
-                <h5>Last updated 2021 Apr</h5>
+            <div class="footer-info">
+                <div class="update-date">
+                    <p>Last updated 2021 Apr</p>
+                </div>
+
+                <div class="copyright">
+                    <p>©David Baik. All rights reserved</p>
+                </div>
+
+                <div class="handed-text">
+                    <p>Hand coded with care</p>
+                </div>
             </div>
 
-            <div class="back-to-top-nav">
-                <a href="#hero">
-                    Back to top
-                </a>
-            </div>
-
-            <div class="handed-text">
-                <h5>Hand coded with care</h5>
+            <div class="footer-links">
+                <a href="style-guide.html">Style Guide</a>
+                <a href="#hero">Back to top</a>
+                <a href="citations.html">Citations</a>
             </div>
         </div>
     </footer>

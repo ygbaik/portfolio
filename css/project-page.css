@@ -9,6 +9,20 @@
     text-align: right;
 }
 
+.header-nav ul{
+    padding:0;
+    margin:0;
+}
+
+.header-nav li{
+    /* margin-bottom:0; */
+}
+
+.header-nav li a{
+    /* padding-top: 0;
+    padding-bottom: 0; */
+}
+
 #project-hero{
     padding-top: 3rem;
 }
@@ -34,6 +48,10 @@
 
 .nav-arrow{
     grid-area: arrow;
+}
+
+.nav-arrow img{
+    width: clamp(.8rem, 10vw, 5rem);
 }
 
 
@@ -62,6 +80,11 @@
     margin-bottom:1rem;
 }
 
+.project-detail{
+    display:flex;
+    align-items: baseline;
+}
+
 .overview-grid{
     display:grid;
 
@@ -86,7 +109,8 @@
     border-bottom:0;
 }
 
-.overview-cell p, a{
+.overview-cell p,
+.overview-cell a{
     display:block;
 }
 
@@ -105,6 +129,11 @@
     grid-area:team;
     padding: 1rem;
     border-bottom:0;
+}
+
+.team-cell p,
+.team-cell a{
+    display:inline-block;
 }
 
 .project-length-cell{
@@ -238,13 +267,51 @@ h3{
 .accordion-indicator{
     margin-right:1.5rem;
 }
+
+#process p{
+    width: clamp(25ch, 50%, 75ch);
+}
 /* PROJECT FOOTER ========================================================= */
-.project-footer{
-    padding-top:5rem;
-    padding-bottom:1rem;
+.project .main-container{
+    grid-template-areas:
+    "cta"
+    "info"
+    "link";  
 }
 
-.project-footer a{
+.project-cta{
+    grid-area:cta;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* justify-content: space-between; */
+    /* align-items: baseline; */
+
+    grid-template-areas: 
+    "linkedin email next";
+}
+
+.project-cta .linkedin-button-contact{
+    grid-area:linkedin;
+    display:flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.project-cta .email-button-contact{
+    grid-area:email;
+    display:flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.project-cta .next-project-button{
+    grid-area:next;
+    display:flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.project-cta a{
     padding:0;
 }
 
@@ -263,7 +330,7 @@ h3{
 }
 
 .next-project-arrow{
-    width:40px;
+    width:clamp(1.5rem, 7vw, 2.25rem);
     align-self: center;
     transform: rotate(270deg);
     margin-left: 1rem;

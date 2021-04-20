@@ -1,0 +1,24 @@
+#style-guide-page{
+    padding-top: 3rem;
+}
+
+#style-guide-page nav{
+    display:flex;
+    justify-content: space-between;
+    text-align: right;;
+
+    padding:1.25rem 1rem;
+}
+
+.citations h3{
+    margin-bottom:.5rem;
+    margin-top:4rem;
+}
+
+.citations li{
+    margin:0;
+}
+
+.citations a{
+    font-weight:400;
+}

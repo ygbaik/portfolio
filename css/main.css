@@ -27,12 +27,12 @@ h2{
 }
 
 h3{
-    font-size:clamp(1.5rem, 7vw, 2.25rem);
+    font-size:clamp(1.5rem, 4vw, 2.25rem);
     font-weight: 500;
 }
 
 h4{
-    font-size:clamp(1rem, 2vw, 1.5rem);
+    font-size:clamp(1rem, 3vw, 1.5rem);
     font-weight:500;
 }
 
@@ -70,10 +70,6 @@ span{
     transform-origin: 0;
 }
 
-span:hover{
-    /* transform:scale(1.3,1); */
-}
-
 ul{
     padding:0;
     margin:0;
@@ -109,7 +105,7 @@ li{
     grid-template-areas: 
     "title title title title title title title title title title nav nav"
     "seeking seeking seeking seeking seeking seeking hello hello hello hello arrow arrow"
-    "linkedin linkedin linkedin email email email email blank blank blank arrow arrow";
+    "linkedin linkedin linkedin email email email email resume resume resume arrow arrow";
 }
 
 #hero{
@@ -198,11 +194,11 @@ li{
     padding:1rem 0;
 }
 
-.blank-div{
-    grid-area:blank;
+.resume-div{
+    grid-area:resume;
     border-top:0px;
     border-left:0px;
-    padding:1rem;
+    padding:1rem 0;
 }
 
 .nav-arrow{
@@ -217,9 +213,8 @@ li{
 }
 
 .nav-arrow img{
-    height:clamp(50%, 7vw, 100%);
+    width: clamp(.8rem, 10vw, 5rem);
 }
-
 
 
 /* PROJECTS SECTION ========================================================= */
@@ -240,16 +235,21 @@ li{
     margin:.5rem 0 .5rem 0;
 }
 
-#projects h3,
-#projects p{
-    display: inline;
+label{
+    font-size:clamp(1.5rem, 7vw, 2.25rem);
+    font-weight: 500;
 }
 
 .project{
     cursor:pointer;
 }
 
-.project-details p{
+.project-role{
+    font-weight:400;
+    font-size:clamp(.8rem, 2vw, 1rem);
+}
+
+.project-details .project-role{
     margin-left:.5rem;
 }
 
@@ -273,7 +273,6 @@ li{
     justify-content: space-between;
     cursor:pointer;
     position:relative;
-    transition:background .1s;
     width:100%;
 }
 
@@ -415,23 +414,40 @@ li{
 
 /* FOOTER ========================================================= */
 
-footer .main-container{
+.main-footer .main-container{
     padding-top:6rem;
+    display:grid;
+
+    grid-template-areas:
+    "link"
+    "info";
+}
+
+.footer-info{
+    grid-area:info;
+    display:flex;
+    align-items:baseline;
+    justify-content: space-between;
+
+    border-top:1px solid black;
+}
+
+.footer-links{
+    padding:1rem 0;
+    grid-area:link;
     display:flex;
     justify-content: space-between;
-    align-items: baseline;
+}
+
+.footer-links a{
+    font-size:.85rem;
+    padding:0;
 }
 
 footer h5{
     margin:0;
 }
 
-.back-to-top-nav a{
+.footer-info p{
     font-size:.85rem;
-    font-weight:600;
-    margin:0;
-}
-
-.back-to-top-nav a:hover{
-    font-family: 'aktiv-grotesk', 'sans-serif';
 }
