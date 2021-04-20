@@ -1,0 +1,453 @@
+/* GLOBAL ========================================================= */
+
+*{
+    box-sizing: border-box;
+    font-family: 'aktiv-grotesk', 'sans-serif';
+
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #FED60A;
+    margin:0;
+    padding:0;
+}
+
+/* TYPOGRAPHY ========================================================= */
+
+h1{
+    font-size:clamp(2.5rem, 7vw, 5rem);
+    margin:0;
+    font-weight: 500;
+}
+
+h2{
+    font-size:clamp(2rem, 10vw, 3rem);
+    font-weight: 500;
+}
+
+h3{
+    font-size:clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 500;
+}
+
+h4{
+    font-size:clamp(1rem, 3vw, 1.5rem);
+    font-weight:500;
+}
+
+h5{
+    font-size:.85rem;
+}
+
+p{
+    font-size:clamp(.8rem, 2vw, 1rem);
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    font-weight:500;
+    font-size:clamp(1rem, 2vw, 1.5rem);
+    padding:1rem 1.5rem;
+}
+
+a:hover{
+    font-style: italic;
+}
+
+.arrow-hover{
+    transition: transform 250ms ease-out;
+    transform-origin: center;
+}
+
+.arrow-hover:hover{
+    transform:skewX(-15deg);
+}
+
+span{
+    transition: all 100ms ease;
+    transform-origin: 0;
+}
+
+ul{
+    padding:0;
+    margin:0;
+}
+
+li{
+    font-size:2rem;
+    font-weight:400;
+
+    margin-bottom:1rem;
+    
+    list-style-type: none;
+}
+
+.main-container{
+    /* width:clamp(900px, 90%, 1700px); */
+    width:90%;
+    margin:0 auto;
+}
+
+/* HERO SECTION ========================================================= */
+
+.grid-border{
+    border:3px solid black;
+}
+
+.hero-grid{
+    display:grid;
+
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: 1fr .7fr auto;
+
+    grid-template-areas: 
+    "title title title title title title title title title title nav nav"
+    "seeking seeking seeking seeking seeking seeking hello hello hello hello arrow arrow"
+    "linkedin linkedin linkedin email email email email resume resume resume arrow arrow";
+}
+
+#hero{
+    height:100vh;
+    padding-top:3rem;
+}
+
+.hero-text{
+    grid-area:title;
+    height:50vh;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:1rem;
+}
+
+.hero-text a,
+.hero-text span{
+    align-self: flex-start;
+}
+
+.title h1{
+    width:clamp(15ch, 65%, 45ch);
+}
+
+#logo{
+    font-size:clamp(1rem, 5vw, 2rem);
+    font-weight: 500;
+
+    padding-left:0;
+
+    cursor:pointer;
+}
+
+.main-nav{
+    grid-area:nav;
+    border-left:0px;
+
+    text-align: right;
+
+    padding:1rem 0;
+}
+
+.seeking{
+    grid-area:seeking;
+    border-top:0px;
+
+    display:flex;
+    flex-direction: column;
+    padding:1rem;
+}
+
+.seeking h4{
+    font-weight: 400;
+    width: clamp(25ch, 80%, 75ch);
+}
+
+.hello{
+    grid-area:hello;
+    border-left:0px;
+    border-top:0px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding:1rem;
+}
+
+.hello h2{
+    font-size:clamp(5rem, 15vw, 15rem);
+    font-weight:500;
+
+    margin:0;
+}
+
+.linkedin-button{
+    grid-area:linkedin;
+    border-top:0px;
+    padding:1rem 0;
+}
+
+.email-button{
+    grid-area: email;
+    border-top:0px;
+    border-left:0px;
+    padding:1rem 0;
+}
+
+.resume-div{
+    grid-area:resume;
+    border-top:0px;
+    border-left:0px;
+    padding:1rem 0;
+}
+
+.nav-arrow{
+    grid-area:arrow;
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+}
+
+.nav-arrow a{
+    padding:0;
+}
+
+.nav-arrow img{
+    width: clamp(.8rem, 10vw, 5rem);
+}
+
+
+/* PROJECTS SECTION ========================================================= */
+
+#projects{
+    padding-top:2rem;
+}
+
+#projects h2{
+    margin-top:0;
+    margin-bottom:5rem;
+}
+
+.divider-line{
+    height:2px;
+    background-color: black;
+    width:100%;
+    margin:.5rem 0 .5rem 0;
+}
+
+label{
+    font-size:clamp(1.5rem, 7vw, 2.25rem);
+    font-weight: 500;
+}
+
+.project{
+    cursor:pointer;
+}
+
+.project-role{
+    font-weight:400;
+    font-size:clamp(.8rem, 2vw, 1rem);
+}
+
+.project-details .project-role{
+    margin-left:.5rem;
+}
+
+.project-accordion label:hover{
+    font-style:italic;
+}
+
+.project-accordion{
+    margin-top:2rem;
+    display:flex;
+    justify-content: space-between;
+    overflow:hidden;
+}
+
+.accordion-wrapper{
+    width:100%;
+}
+
+.accordion-label{
+    display:flex;
+    justify-content: space-between;
+    cursor:pointer;
+    position:relative;
+    width:100%;
+}
+
+.accordion-content{
+    display:none;
+}
+
+.accordion-input{
+    display:none;
+}
+
+ .accordion-input:checked ~ .accordion-content{
+     display: block;
+}
+
+/* PROJECTS ACCORDION CONTENT SECTION ========================================================= */
+
+.content-grid{
+    display:grid;
+
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+
+    grid-template-areas:
+    "content img img";
+}
+
+.content{
+    grid-area:content;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-image{
+    grid-area:img;
+    width: 100%;
+}
+
+.project-nav-button{
+    margin-top:2rem;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    border:1px solid black;
+}
+
+.project-nav-button p{
+    margin:0;
+}
+
+.project-page-nav{
+    transform: rotate(-135deg);
+    height:15px;
+    margin-left:.5rem;
+}
+
+
+/* CONTACT SECTION ========================================================= */
+
+#contact{
+    margin-top:7rem;
+    padding-top:2rem;
+}
+
+#contact h2{
+    /* margin-bottom:5rem; */
+    margin-top:0;
+}
+
+.contact-grid{
+    display:grid;
+
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: auto auto 1fr;
+
+    grid-template-areas: 
+    "img img img img linkedin linkedin linkedin email email email email email"
+    "img img img img border-l link-arrow . . email-arrow . . border-r"
+    "img img img img about about about about about about about about";
+}
+
+.linkedin-button-contact{
+    grid-area:linkedin;
+    padding:1rem 0;
+}
+
+.email-button-contact{
+    grid-area:email;
+    border-left:0px;
+    padding:1rem 0;
+}
+
+.about-contact{
+    grid-area:about;
+    border-top:0px;
+    padding:1rem;
+}
+
+.contact-image{
+    grid-area:img;
+    border-right:0px;
+    padding:0;
+    background-color: #FED60A;
+}
+
+.contact-image img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    mix-blend-mode: overlay;
+}
+
+.linkedin-arrow{
+    grid-area:link-arrow;
+
+    padding:1.5rem;
+}
+
+.email-arrow{
+    grid-area:email-arrow;
+    padding:1.5rem;
+}
+
+.cta-arrow{
+    transform:rotate(135deg);
+}
+
+.border-l-div{
+    grid-area:border-l;
+    border-left:4px solid black;
+}
+
+.border-r-div{
+    grid-area:border-r;
+    border-right:4px solid black;
+}
+
+/* FOOTER ========================================================= */
+
+.main-footer .main-container{
+    padding-top:6rem;
+    display:grid;
+
+    grid-template-areas:
+    "link"
+    "info";
+}
+
+.footer-info{
+    grid-area:info;
+    display:flex;
+    align-items:baseline;
+    justify-content: space-between;
+
+    border-top:1px solid black;
+}
+
+.footer-links{
+    padding:1rem 0;
+    grid-area:link;
+    display:flex;
+    justify-content: space-between;
+}
+
+.footer-links a{
+    font-size:.85rem;
+    padding:0;
+}
+
+footer h5{
+    margin:0;
+}
+
+.footer-info p{
+    font-size:.85rem;
+}
