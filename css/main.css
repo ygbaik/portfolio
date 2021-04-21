@@ -130,6 +130,7 @@ li{
 
 .title h1{
     width:clamp(15ch, 65%, 45ch);
+    line-height: 110%;
 }
 
 #logo{
@@ -162,6 +163,7 @@ li{
 .seeking h4{
     font-weight: 400;
     width: clamp(25ch, 80%, 75ch);
+    /* margin-bottom:0; */
 }
 
 .hello{

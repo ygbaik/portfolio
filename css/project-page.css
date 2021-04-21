@@ -257,10 +257,88 @@
 
 /* DIPPD PROJECT ========================================================= */
 
+.ux-research-grid,
+.art-direction-grid,
+.interactions-grid{
+    display:grid;
+
+    grid-column-gap:2rem;
+    grid-row-gap:1rem;
+
+    grid-template-columns: repeat(2, minmax(0,1fr));
+}
+
+.ux-research-grid{
+    grid-template-areas:
+    "info info"
+    "user-goals client-goals";
+}
+
+.art-direction-grid{
+    display:flex;
+    flex-direction: column;
+
+    /* grid-template-areas:
+    "info"
+    "moodboard"; */
+}
+
+.interactions-flex{
+    display:flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    margin-top:1rem;
+}
+
+.interactions-grid{
+    grid-row-gap:2rem;
+}
+
+.ux-research-info,
+.art-direction-info{
+    grid-area:info;
+}
+
+.art-direction-info p,
+.interactions-info p{
+    width:clamp(25ch, 97%, 75ch) !important;
+}
+
+#client-goals,
+#user-goals,
+#moodboard,
+.interactions-grid video{
+    width:100%; 
+}
+
+#client-goals{
+    grid-area:client-goals;
+}
+
+#user-goals{
+    grid-area:user-goals;
+}
+
+#moodboard{
+    grid-area:moodboard;
+}
+
+
 
 /* PROCESS SECTION ========================================================= */
 
-h3{
+#process section{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.highlight{
+    font-weight:400;
+    background: rgba(255,255,255,.5);
+}
+
+#process h3{
     margin:0;
 }
 
@@ -268,9 +346,46 @@ h3{
     margin-right:1.5rem;
 }
 
-#process p{
-    width: clamp(25ch, 50%, 75ch);
+#process p,
+#process ul li{
+    width: clamp(45ch, 50%, 75ch);
 }
+
+#process a{
+    font-weight:400;
+    font-size:clamp(.8rem, 2vw, 1rem);
+    margin:0rem;
+    padding:0;
+}
+
+#process ul{
+    padding-left: 2.5rem;
+}
+
+#process ul li{
+    font-weight:400;
+    font-size:clamp(.8rem, 2vw, 1rem);
+    list-style: square;
+    font-size:clamp(.8rem, 2vw, 1rem);
+    margin:0;
+}
+
+ol{
+    padding-left: 2.5rem;
+}
+
+ol li a{
+    font-weight:400;
+    padding:0;
+    font-size:clamp(.8rem, 2vw, 1rem);
+}
+
+ol li{
+    list-style: square;
+    font-size:clamp(.8rem, 2vw, 1rem);
+    margin:0;
+}
+
 /* PROJECT FOOTER ========================================================= */
 .project .main-container{
     grid-template-areas:
