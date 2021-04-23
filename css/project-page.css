@@ -4,7 +4,6 @@
     grid-area: nav;
     display:flex;
     justify-content: space-between;
-    padding:1rem 0;
 
     text-align: right;
 }
@@ -19,8 +18,8 @@
 }
 
 .header-nav li a{
-    /* padding-top: 0;
-    padding-bottom: 0; */
+    padding-top: 0;
+    /* padding-bottom: 0; */
 }
 
 #project-hero{
@@ -223,12 +222,6 @@
     object-fit: scale-down;
 }
 
-.deliverable-2,
-.deliverable-3,
-.deliverable-4{
-    /* width:100%; */
-}
-
 .deliverable-2{
     grid-area:deliverable-2;
 }
@@ -258,6 +251,99 @@
     transform:translateX(-50%);
 }
 
+/* VENTURA FUTURE PROJECT ========================================================= */
+
+.fade{
+    filter:opacity(.2);
+}
+
+figure{
+    margin:0;
+    margin-bottom:1rem;
+}
+
+figcaption{
+    margin-top:.5rem;
+    font-size:clamp(.5rem, 2vw, 1rem);
+    line-height: 140%;
+    text-align: center;
+}
+
+.dan-friedman-grid{
+    display:grid;
+
+    grid-template-areas: 
+    "info"
+    "work";
+}
+
+.dan-friedman-info{
+    grid-area:info;
+}
+
+.dan-friedman-work{
+    grid-area:work;
+}
+.dan-friedman-work img{
+    width:100%;
+}
+
+.experimentation-grid{
+    display:grid;
+
+    grid-template-columns: repeat(3, minmax(0,1fr));
+
+    grid-row-gap:1rem;
+
+    grid-template-areas: 
+    "poster poster poster"
+    "totebag1 totebag2 totebag3"
+    "sketchbook1 sketchbook2 sketchbook3";
+}
+
+.posters{
+    grid-area:poster;
+}
+
+.totebag-1{
+    grid-area:totebag1;
+}
+
+.totebag-2{
+    grid-area:totebag2;
+}
+
+.totebag-3{
+    grid-area:totebag3;
+}
+
+.sketchbook-1{
+    grid-area:sketchbook1;
+}
+
+.sketchbook-2{
+    grid-area:sketchbook2;
+}
+
+.sketchbook-3{
+    grid-area:sketchbook3;
+}
+
+figure img{
+    width:100%;
+}
+
+.graphic-assets-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap:3rem;
+    
+    text-align: center;
+
+    grid-template-areas: 
+    "deliverable-4 deliverable-4"
+    "deliverable-2 deliverable-3";
+}
 /* DIPPD PROJECT ========================================================= */
 
 .ux-research-grid,
@@ -327,8 +413,6 @@
     grid-area:moodboard;
 }
 
-
-
 /* PROCESS SECTION ========================================================= */
 
 #process section{
@@ -370,11 +454,21 @@
     font-size:clamp(.8rem, 2vw, 1rem);
     list-style: square;
     font-size:clamp(.8rem, 2vw, 1rem);
-    margin:0;
+    margin:.25rem;
+}
+
+#process ul li ol li{
+    list-style: none;
+}
+
+#process ul li ol{
+    /* padding-left: 1.5rem; */
 }
 
 ol{
     padding-left: 2.5rem;
+    /* padding:0; */
+    counter-reset: item;
 }
 
 ol li a{
@@ -384,9 +478,16 @@ ol li a{
 }
 
 ol li{
-    list-style: square;
+    counter-increment: item;
+    /* list-style: upper-roman; */
     font-size:clamp(.8rem, 2vw, 1rem);
-    margin:0;
+    margin:.25rem;
+}
+
+ol li:before{
+    margin-right:.5rem;
+    content: counter(item);
+    font-size:clamp(.8rem, 2vw, 1rem);
 }
 
 /* PROJECT FOOTER ========================================================= */
@@ -440,18 +541,23 @@ ol li{
 .next-project-text{
     display: flex;
     align-items: baseline;
+    white-space: nowrap;
+}
+
+.next-project-text h3{
+    font-size:clamp(1.25rem, 4vw, 2.25rem);
 }
 
 .next-project-text p{
-    margin-left:.5rem;
+    margin-left:clamp(.15rem, 1vw, .5rem);
     font-weight: 400;
 }
 
 .next-project-arrow{
-    width:clamp(1.5rem, 7vw, 2.25rem);
+    width:clamp(1rem, 3vw, 2.25rem);
     align-self: center;
     transform: rotate(270deg);
-    margin-left: 1rem;
+    margin-left: clamp(.4rem, 1vw, 1rem);
 }
 
 .next-project .arrow-hover{
