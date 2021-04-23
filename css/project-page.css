@@ -293,7 +293,7 @@ figcaption{
 
     grid-template-columns: repeat(3, minmax(0,1fr));
 
-    grid-row-gap:1rem;
+    grid-row-gap:3rem;
 
     grid-template-areas: 
     "poster poster poster"
@@ -344,6 +344,29 @@ figure img{
     "deliverable-4 deliverable-4"
     "deliverable-2 deliverable-3";
 }
+
+.interaction-gif-grid{
+    display:grid;
+
+    grid-gap:1rem;
+
+    grid-template-columns: 1fr 1fr;
+}
+
+.interaction-gif-wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.interaction-gif-wrapper p{
+    width:clamp(25ch, 95%, 75ch) !important;
+}
+
+.ventura-future-interaction-gif{
+    width:100%;
+}
+
 /* DIPPD PROJECT ========================================================= */
 
 .ux-research-grid,
