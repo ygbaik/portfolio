@@ -1,25 +1,32 @@
 /* HERO SECTION ========================================================= */
 
-.header-nav{
-    grid-area: nav;
-    display:flex;
-    justify-content: space-between;
-
-    text-align: right;
+header{
+    margin-top:3rem;
+    width:100%;
 }
 
-.header-nav ul{
+header .main-container{
+    display:flex;
+    justify-content: space-between;
+    position:relative;
+}
+
+header nav{
+    display:block;
+}
+
+header ul{
     padding:0;
     margin:0;
 }
 
-.header-nav li{
-    /* margin-bottom:0; */
+header li{
+    display:flex;
 }
 
-.header-nav li a{
+header li a{
     padding-top: 0;
-    /* padding-bottom: 0; */
+    padding-right: 0;
 }
 
 #project-hero{
@@ -32,7 +39,6 @@
     grid-template-columns: 4fr 1fr;
     /* grid-template-rows: auto auto; */
     grid-template-areas: 
-    "nav nav"
     "thumbnail arrow";
 }
 
@@ -85,7 +91,7 @@
 }
 
 .project-details p{
-    margin-left: .5rem;
+    margin-left: .5rem !important;
 }
 
 .overview-grid{
@@ -112,6 +118,10 @@
     border-bottom:0;
 }
 
+.overview-cell p{
+    width:clamp(30ch, 100%, 75ch);
+}
+
 .overview-cell p,
 .overview-cell a{
     display:block;
@@ -120,7 +130,6 @@
 .overview-cell a{
     margin-top:2rem;
 }
-
 
 .roles-cell{
     grid-area:roles;
@@ -390,9 +399,9 @@ figure img{
     display:flex;
     flex-direction: column;
 
-    /* grid-template-areas:
+    grid-template-areas:
     "info"
-    "moodboard"; */
+    "moodboard";
 }
 
 .interactions-flex{
@@ -458,7 +467,7 @@ figure img{
 
 #process p,
 #process ul li{
-    width: clamp(45ch, 50%, 75ch);
+    width: clamp(45ch, 80%, 75ch);
 }
 
 #process a{
@@ -517,40 +526,40 @@ ol li:before{
 .project .main-container{
     grid-template-areas:
     "cta"
-    "info"
-    "link";  
+    "link"
+    "info";  
 }
 
 .project-cta{
     grid-area:cta;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    /* justify-content: space-between; */
-    /* align-items: baseline; */
 
     grid-template-areas: 
     "linkedin email next";
+
+    border-bottom:.5px solid rgba(0,0,0,0.5);
 }
 
 .project-cta .linkedin-button-contact{
     grid-area:linkedin;
     display:flex;
     justify-content: flex-start;
-    align-items: baseline;
+    align-items: center;
 }
 
 .project-cta .email-button-contact{
     grid-area:email;
     display:flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
 }
 
 .project-cta .next-project-button{
     grid-area:next;
     display:flex;
     justify-content: flex-end;
-    align-items: baseline;
+    align-items: center;
 }
 
 .project-cta a{
@@ -568,11 +577,12 @@ ol li:before{
 }
 
 .next-project-text h3{
-    font-size:clamp(1.25rem, 4vw, 2.25rem);
+    font-size:clamp(1rem, 2vw, 2.25rem);
 }
 
 .next-project-text p{
-    margin-left:clamp(.15rem, 1vw, .5rem);
+    margin:0;
+    margin-left:clamp(.1rem, .5vw, .5rem);
     font-weight: 400;
 }
 
@@ -580,7 +590,7 @@ ol li:before{
     width:clamp(1rem, 3vw, 2.25rem);
     align-self: center;
     transform: rotate(270deg);
-    margin-left: clamp(.4rem, 1vw, 1rem);
+    margin-left: clamp(.2rem, .5vw, 1rem);
 }
 
 .next-project .arrow-hover{

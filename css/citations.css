@@ -2,10 +2,16 @@
     padding-top: 3rem;
 }
 
-#style-guide-page nav{
+#style-guide-page header .main-container{
     display:flex;
     justify-content: space-between;
-    text-align: right;;
+}
+
+#style-guide-page nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
 }
 
 .citations h3{

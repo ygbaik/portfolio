@@ -3,27 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dipp'd</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/zng6zgr.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/project-page.css">
+    <link rel="stylesheet" href="css/responsiveness.css">
 
     <link rel="icon" type="image/svg" href="img/favicon.svg" />
 </head>
 
 <body id="projects-page">
+    <header>
+        <div class="main-container">
+        <span><a href="index.html" id="logo">David Baik</a></span>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="footer-info">
+                <div class="copyright">
+                    <p>©David Baik. All rights reserved</p>
+                </div>
+            </div>
+
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        </div>
+     </header>
+
     <section id="project-hero">
         <div class="main-container project-hero-grid">
-
-            <nav class="header-nav">
-                <span><a href="index.html" id="logo">David Baik</a></span>
-                <ul>
-                    <li><a href="index.html#projects">Projects</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-
             <div class="project-thumbnail-wrapper">
                 <img class="project-thumbnail" src="img/dippd.gif" alt="project thumbnail gif image">
             </div>
@@ -41,7 +57,7 @@
             <div class="overview-title">
                 <div class="project-details">
                     <h3>Dipp'd</h3>
-                    <p>(UX + front-end project, ecommerce website)</p>
+                    <p>(UX + front-end project, website)</p>
                 </div>
 
                 <div class="project-date">
@@ -256,9 +272,7 @@
                                         </p>
                                     </div>
 
-                                    <video autoplay loop>
-                                        <source src="video/dippd-landing.mp4" type="video/mp4">
-                                    </video>
+                                    <img src="img/dippd-landing.gif" alt="Gif of landing page animation for Dipp'd">
                                 </div>
 
                                 <div class="interactions-flex">
@@ -272,9 +286,7 @@
                                         </p>
                                     </div>
 
-                                    <video autoplay loop>
-                                        <source src="video/dippd-carousel.mp4" type="video/mp4">
-                                    </video>
+                                    <img src="img/dippd-carousel.gif" alt="Gif of social media post carousel on Dipp'd home page">
                                 </div>
 
                                 <div class="interactions-flex">
@@ -287,9 +299,7 @@
                                         </p>
                                     </div>
 
-                                    <video autoplay loop>
-                                        <source src="video/dippd-shop.mp4" type="video/mp4">
-                                    </video>
+                                    <img src="img/dippd-shop.gif" alt="Gif of Dipp'd shop product interaction">
                                 </div>
                             </div>
                         </section>
