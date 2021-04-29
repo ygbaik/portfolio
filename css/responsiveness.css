@@ -599,7 +599,8 @@ header nav .footer-info{
         width: clamp(30ch, 90%, 75ch);
     }
 
-    #process ul{
+    #process ul,
+    #process ol{
         padding-left:1rem;
     }
 
