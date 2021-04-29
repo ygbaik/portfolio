@@ -596,7 +596,7 @@ header nav .footer-info{
     /* PROCESS SECTION ========================================================= */
     #process p,
     #process ul li{
-        width: clamp(30ch, 90%, 75ch);
+        width: clamp(25ch, 90%, 75ch);
     }
 
     #process ul,
