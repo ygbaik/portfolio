@@ -445,6 +445,10 @@ figure img{
     grid-area:moodboard;
 }
 
+.project-gif{
+    object-fit: cover;
+}
+
 /* PROCESS SECTION ========================================================= */
 
 #process section{
