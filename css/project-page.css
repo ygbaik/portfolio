@@ -446,7 +446,8 @@ figure img{
 }
 
 .project-gif{
-    object-fit: cover;
+    object-fit: contain;
+    width:100%;
 }
 
 /* PROCESS SECTION ========================================================= */
