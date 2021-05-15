@@ -485,7 +485,7 @@ label{
     padding:1rem 0;
     grid-area:link;
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .footer-links a{
