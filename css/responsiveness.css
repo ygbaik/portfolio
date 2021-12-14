@@ -1,0 +1,651 @@
+/* HAMBURGER MENU ========================================================= */
+
+/* couldn't figure out how to make the hamburger menu work with the current markup */
+
+.nav-toggle:checked ~ #style-guide-page nav,
+.nav-toggle:checked ~ nav {
+    display:flex;
+    /* position:fixed; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-toggle{
+    display:none;
+}
+
+.nav-toggle-label{
+    display: none;
+}
+
+header nav .footer-info{
+    display:none;
+}
+
+@media screen and (max-width: 61rem){
+    
+    /* PROJECT PAGE */
+    /* PROJECT PAGE */
+    /* PROJECT PAGE */
+
+    /* HERO SECTION ========================================================= */
+
+    .hero-text{
+        height:45vh;
+    }
+
+    header li{
+        margin-bottom:1rem;
+    }
+
+    header nav ul li a{
+        padding:0;
+    }
+}
+
+@media screen and (max-width: 55rem){
+    /* INDEX */
+    /* INDEX */
+    /* INDEX */
+
+     /* HERO SECTION ========================================================= */
+
+    .hero-text{
+        height:40vh;
+    }
+}
+
+@media screen and (max-width: 44rem){
+
+    /* GLOBAL */
+    /* GLOBAL */
+    /* GLOBAL */
+
+    .divider-line{
+        height:1px;
+    }
+
+    /* INDEX */
+    /* INDEX */
+    /* INDEX */
+
+    /* HAMBURGER MENU ========================================================= */
+    .nav-toggle:checked ~ #style-guide-page nav,
+    header nav{
+        display:none;
+        position:fixed;
+        right:0;
+        /* top:100%; */
+        width:100%;
+        /* background-color:var(--primary); */
+        height:100vh;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .nav-toggle-label{
+        position:absolute;
+        right:0;
+        top:0;
+        /* border:1px solid red; */
+        height:100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        /* display: block; */
+        display:none;
+        background: black;
+        height:.15rem;
+        width:1.75rem;
+        position:relative;
+        z-index: 999;
+    }
+
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after{
+        content:'';
+        position:absolute;
+    }
+
+    .nav-toggle-label span::before{
+        bottom:.5rem;
+    }
+    
+    .nav-toggle-label span::after{
+        top:.5rem;
+    }
+
+    /* HERO SECTION ========================================================= */
+
+    .hero-grid{
+        grid-template-areas: 
+        "title title title title title title title title title title title title"
+        "seeking seeking seeking seeking seeking seeking hello hello hello hello hello hello"
+        "linkedin linkedin linkedin linkedin email email email email resume resume resume resume";
+    }
+
+    .hero-text{
+        height:30vh;
+    }
+
+    .main-nav{
+        display:none;
+    }
+
+    .main-nav nav{
+        display:none;
+    }
+
+    header{
+        position:relative;
+        display:flex;
+        justify-content: space-between;
+        /* align-items: center; */
+    }
+
+    header nav a {
+        padding:0;
+    }
+
+    .nav-arrow{
+        display:none;
+    }
+
+    .linkedin-button{
+        padding:.75rem 1rem;
+    }
+    
+    .email-button{
+        padding:.75rem 1rem;
+    }
+    
+    .resume-button{
+        padding:.75rem 1rem;
+    }
+
+    /* GRID BORDERS ========================================================= */
+
+    .grid-border{
+        border-width: 2.5px;
+    }
+
+    /* PROJECTS ACCORDION CONTENT SECTION ========================================================= */
+
+    #projects h2{
+        margin-bottom:3rem;
+    }
+
+    .content-grid{
+        grid-gap: .5rem;
+    
+        grid-template-areas:
+        "img img img"
+        "content content content";
+    }
+
+    .project-nav-button{
+        margin-top:0rem;
+        align-self: flex-end;
+    }
+
+    .content{
+        flex-direction: row;
+        grid-gap:1rem;
+    }
+
+     /* CONTACT SECTION ========================================================= */
+
+     #contact{
+        margin-top:4rem;
+    }
+
+    .linkedin-button-contact{
+        padding:.75rem 1rem;
+    }
+    
+    .email-button-contact{
+        padding:.75rem 1rem;
+    }
+
+    /* FOOTER ========================================================= */
+
+    .footer-links{
+        padding:.5rem 0;
+    }
+    
+    .footer-links a{
+        font-size:clamp(.6rem, 1.5vw, .85rem);
+        padding:0;
+    }
+
+    /* PROJECT PAGE */
+    /* PROJECT PAGE */
+    /* PROJECT PAGE */
+
+    /* HERO SECTION ========================================================= */
+
+    .project-hero-grid{
+        display:grid;
+    
+        grid-template-columns: 4fr 1fr;
+        /* grid-template-rows: auto auto; */
+        grid-template-areas: 
+        "nav nav"
+        "thumbnail thumbnail";
+    }
+
+    .header-nav li{
+        margin-bottom:.5rem;
+    }
+
+    .header-nav li a{
+        padding:0;
+    }
+
+    /* OVERVIEW SECTION ========================================================= */
+
+    .overview-grid{
+        grid-template-areas:
+        "overview overview"
+        "overview overview"
+        "roles roles"
+        "team team"
+        "client length"
+        "type type";
+    }
+
+    #projects-page #projects h4{
+        margin-top:0rem;
+        margin-bottom:.5rem;
+    }
+
+    #projects-page #projects p,
+    #projects-page #projects a{
+        margin:.5rem 0;
+    }
+
+    .overview-cell{
+        border-right:2.5px solid black;
+        padding:.75rem 1rem;
+    }
+
+    .roles-cell{
+        border-bottom:0;
+        padding:.75rem 1rem;
+    }
+    
+    .team-cell{
+        border-bottom:0;
+        padding:.75rem 1rem;
+    }
+    
+    .project-length-cell{
+        border-bottom:0;
+        border-left:0;
+        padding:.75rem 1rem;
+    }
+    
+    .client-cell{
+        border-bottom:0;
+        padding:.75rem 1rem;
+    }
+    
+    .project-type-cell{
+        border-right:2.5px solid black;
+        padding:.75rem 1rem;
+    }
+
+    
+
+    /* DELIVERABLES SECTION ========================================================= */
+    .deliverables-grid{
+        grid-row-gap:2rem;
+    
+        grid-template-areas: 
+        "heading heading"
+        "mockup mockup"
+        "deliverable-2 deliverable-2"
+        "deliverable-3 deliverable-3"
+        "deliverable-4 deliverable-4";
+    }
+    
+    #deliverables h3{
+        margin-bottom:0;
+    }
+    
+    .mac-mockup{
+        mix-blend-mode: multiply;
+        width:90%;
+    }
+
+    .prototype{
+        position:absolute;
+        width:90%;
+        top:5%;
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    .dippd-grid .prototype{
+        width:85%;
+    }
+
+    .iphone-mockup{
+        width:90%;
+        mix-blend-mode: multiply;
+    }
+    
+    .mobile-prototype{
+        position:absolute;
+        width:30%;
+        top:10%;
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    /* PROCESS SECTION ========================================================= */
+
+    #process p,
+    #process ul li{
+        width: clamp(45ch, 85%, 75ch);
+    }
+
+    /* VENTURA FUTURE PROJECT ========================================================= */
+
+    .interaction-gif-grid{
+        grid-template-columns: 1fr;
+    }
+
+    /* DIPPD PROJECT ========================================================= */
+
+    .ux-research-grid,
+    .art-direction-grid,
+    .interactions-grid{
+        display:grid;
+
+        grid-column-gap:2rem;
+        grid-row-gap:1rem;
+
+        grid-template-columns: repeat(1, minmax(0,1fr));
+    }
+
+    .ux-research-grid{
+        /* grid-template-columns: repeat(1, minmax(0,1fr)); */
+
+        grid-template-areas:
+        "info info"
+        "user-goals user-goals"
+        "client-goals client-goals";
+    }
+
+     /* FOOTER ========================================================= */
+
+     .next-project-text{
+        flex-direction: column-reverse;
+     }
+
+     .next-project-text p{
+        font-size:.75rem;
+        margin:0;
+    }
+
+      /* CITATIONS AND STYLE GUIDE ========================================================= */
+      #style-guide-page h1{
+        margin-top:2.5rem;
+      }
+}
+
+@media screen and (max-width: 35rem){
+    
+    /* INDEX */
+    /* INDEX */
+    /* INDEX */
+
+    /* HERO SECTION ========================================================= */
+    .hero-text{
+        height:30vh;
+    }
+    
+    .hero-text,
+    .seeking,
+    .hello,
+    .linkedin-button,
+    .email-button,
+    .resume-button,
+    .linkedin-button-contact,
+    .email-button-contact,
+    .about-contact{
+        padding:.75rem;
+    }
+
+    .content-grid{
+        grid-gap: 0rem;
+    }
+    
+    .content-text p{
+        width: clamp(25ch, 100%, 75ch);    
+    }
+
+    /* PROJECT PAGE */
+    /* PROJECT PAGE */
+    /* PROJECT PAGE */
+
+    /* OVERVIEW SECTION ========================================================= */
+
+    .project-details p{
+        margin-left: .25rem !important;
+    }
+    
+    /* CONTACT SECTION ========================================================= */
+    
+     .contact-grid{
+        display:grid;
+    
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-rows: auto auto 1fr;
+    
+        grid-template-areas: 
+        "img img img img img img img img img img img img"
+        "linkedin linkedin linkedin linkedin linkedin linkedin email email email email email email"
+        "about about about about about about about about about about about about"
+        "about about about about about about about about about about about about"
+        "about about about about about about about about about about about about";
+    }
+
+    .linkedin-button-contact{
+        grid-area:linkedin;
+        padding:.75rem;
+        border-top:0;
+    }
+    
+    .email-button-contact{
+        grid-area:email;
+        border-left:0px;
+        border-top:0;
+        padding:.75rem;
+    }
+    
+    .about-contact{
+        border-top:0px;
+        padding:.75rem;
+    }
+    
+    .contact-image{
+        grid-area:img;
+        border-right:2.5px solid black;
+        padding:0;
+    }
+    
+    .contact-image img{
+        height:100%;
+        max-height:450px;
+        object-position:top;
+    }
+}
+
+@media screen and (max-width: 30rem){
+    
+    /* INDEX */
+    /* INDEX */
+    /* INDEX */
+
+    /* HERO SECTION ========================================================= */
+    .seeking h4{
+        font-size:.8rem;
+        width:clamp(15ch, 100%, 75ch);
+        margin:.5rem 0;
+    }
+
+    /* PROJECT SECTION ========================================================= */
+    #projects h2{
+        margin-bottom:2rem;
+    }
+
+    .accordion-label{
+        display:flex;
+        align-items: center;
+    }
+    
+    .project-details{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .project-details .project-role{
+        margin-left:0;
+        width:clamp(10ch,100%,35ch);
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+    /* CONTENT SECTION ========================================================= */
+    #contact{
+        margin-top:2rem;
+    }
+
+    .contact-image img{
+        max-height:350px;
+    }
+}
+
+@media screen and (max-width: 25rem){
+
+    /* INDEX */
+    /* INDEX */
+    /* INDEX */
+
+
+    /* HERO + CONTACT SECTION ========================================================= */
+    .hero-text{
+        height:30vh;
+    }
+
+    .hero-text,
+    .seeking,
+    .hello,
+    .linkedin-button,
+    .email-button,
+    .resume-button,
+    .linkedin-button-contact,
+    .email-button-contact,
+    .about-contact{
+        padding:.5rem;
+    }
+
+     .seeking h4{
+        font-size:.65rem;
+        width:clamp(10ch, 100%, 75ch);
+        margin:.5rem 0;
+    }
+
+    .about-contact h3{
+        width: clamp(25ch, 100%, 75ch);
+    }
+
+    /* PROJECT PAGE */
+    /* PROJECT PAGE */
+    /* PROJECT PAGE */
+
+    /* HERO SECTION ========================================================= */
+    #projects-page #projects{
+        padding-top:4rem;
+        margin-bottom:4rem;
+    }
+
+    /* OVERVIEW SECTION ========================================================= */
+    .overview-title{
+        align-items: baseline;
+    }
+    
+    .project-details{
+        flex-direction: column;
+    }
+
+     .project-details p{
+        margin:0 !important;
+    }
+
+
+    /* PROCESS SECTION ========================================================= */
+    #process p,
+    #process ul li{
+        width: clamp(25ch, 90%, 75ch);
+    }
+
+    #process ul,
+    #process ol{
+        padding-left:1rem;
+    }
+
+
+    /* FOOTER ========================================================= */
+
+    .main-footer .main-container{
+        padding-top:2rem;
+    }
+
+    .footer-info{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info p{
+        margin:.6rem 0;
+    }
+
+    .copyright{
+        order: 3;
+    }
+
+    .footer-links{
+        flex-direction: column;
+        align-items: center;
+        padding:0;
+    }
+
+    .footer-links a{
+        margin:.6rem 0;
+    }
+
+    #back-to-top{
+        order:3;
+    }
+
+    .project-cta{
+        /* display:flex; */
+        grid-template-columns: 1fr 1fr 2fr;
+        /* flex-direction: column-reverse; */
+        /* align-items: center; */
+    }
+
+    .project-cta .next-project-text{
+        align-self: flex-end;
+    }
+}

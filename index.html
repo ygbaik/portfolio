@@ -4,10 +4,12 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Baik</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/zng6zgr.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsiveness.css">
 
     <link rel="icon" type="image/svg" href="img/favicon.svg" />
 </head>
@@ -16,7 +18,19 @@
     <section id="hero">
         <div class="main-container hero-grid">
             <div class="hero-text grid-border">
-                <span><a href="index.html" id="logo">David Baik</a></span>
+                <header>
+                    <span><a href="index.html" id="logo">David Baik</a></span>
+                    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                    <nav>
+                        <ul>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <label for="nav-toggle" class="nav-toggle-label">
+                        <span></span>
+                    </label>
+                 </header>
 
                 <div class="title">
                     <h1 class="title-animation">UX Designer + Cinematographer</h1>
@@ -49,7 +63,7 @@
                 <span><a href="mailto:ygbaik6@gmail.com" target="_blank">Email</a></span>
             </div>
 
-            <div class="resume-div grid-border">
+            <div class="resume-button grid-border">
                 <span><a href="img/david-baik-resume.pdf" target="_blank">Resume</a></span>
             </div>
 
@@ -377,9 +391,9 @@
             </div>
 
             <div class="footer-links">
-                <a href="style-guide.html">Style Guide</a>
-                <a href="#hero">Back to top</a>
-                <a href="citations.html">Citations</a>
+                <!-- <a href="style-guide.html">Style Guide</a> -->
+                <a id="back-to-top" href="#hero">Back to top</a>
+                <!-- <a href="citations.html">Citations</a> -->
             </div>
         </div>
     </footer>

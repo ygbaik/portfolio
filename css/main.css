@@ -1,14 +1,18 @@
 /* GLOBAL ========================================================= */
 
-*{
+*, *::before, *::after {
     box-sizing: border-box;
     font-family: 'aktiv-grotesk', 'sans-serif';
 
     scroll-behavior: smooth;
 }
 
+:root{
+    --primary:#FED60A;
+}
+
 body{
-    background-color: #FED60A;
+    background-color: var(--primary);
     margin:0;
     padding:0;
 }
@@ -16,19 +20,20 @@ body{
 /* TYPOGRAPHY ========================================================= */
 
 h1{
-    font-size:clamp(2.5rem, 7vw, 5rem);
+    font-size:clamp(1.9rem, 7vw, 5rem);
     margin:0;
     font-weight: 500;
 }
 
 h2{
-    font-size:clamp(2rem, 10vw, 3rem);
+    font-size:clamp(2rem, 5vw, 3rem);
     font-weight: 500;
 }
 
 h3{
     font-size:clamp(1.5rem, 4vw, 2.25rem);
     font-weight: 500;
+    margin:0;
 }
 
 h4{
@@ -42,13 +47,14 @@ h5{
 
 p{
     font-size:clamp(.8rem, 2vw, 1rem);
+    line-height: 140%;
 }
 
 a{
     text-decoration: none;
     color:black;
     font-weight:500;
-    font-size:clamp(1rem, 2vw, 1.5rem);
+    font-size:clamp(.8rem, 2vw, 1.5rem);
     padding:1rem 1.5rem;
 }
 
@@ -96,6 +102,10 @@ li{
     border:3px solid black;
 }
 
+.main-container .hero-grid{
+    height:100%;
+}
+
 .hero-grid{
     display:grid;
 
@@ -109,8 +119,8 @@ li{
 }
 
 #hero{
-    height:100vh;
-    padding-top:3rem;
+    /* height:100vh; */
+    padding-top:2rem;
 }
 
 .hero-text{
@@ -134,10 +144,11 @@ li{
 }
 
 #logo{
-    font-size:clamp(1rem, 5vw, 2rem);
+    font-size:clamp(1rem, 3vw, 2rem);
     font-weight: 500;
 
     padding-left:0;
+    padding:0;
 
     cursor:pointer;
 }
@@ -148,7 +159,13 @@ li{
 
     text-align: right;
 
-    padding:1rem 0;
+    padding:.5rem 0;
+
+    position:relative;
+}
+
+header nav{
+    display:none;
 }
 
 .seeking{
@@ -163,7 +180,7 @@ li{
 .seeking h4{
     font-weight: 400;
     width: clamp(25ch, 80%, 75ch);
-    /* margin-bottom:0; */
+    font-size:clamp(.85rem, 2vw, 1.25rem);
 }
 
 .hello{
@@ -186,21 +203,27 @@ li{
 .linkedin-button{
     grid-area:linkedin;
     border-top:0px;
-    padding:1rem 0;
+    padding:1rem;
 }
 
 .email-button{
     grid-area: email;
     border-top:0px;
     border-left:0px;
-    padding:1rem 0;
+    padding:1rem;
 }
 
-.resume-div{
+.resume-button{
     grid-area:resume;
     border-top:0px;
     border-left:0px;
-    padding:1rem 0;
+    padding:1rem;
+}
+
+.linkedin-button a,
+.email-button a,
+.resume-button a{
+    padding:0;
 }
 
 .nav-arrow{
@@ -222,12 +245,12 @@ li{
 /* PROJECTS SECTION ========================================================= */
 
 #projects{
-    padding-top:2rem;
+    padding-top:4rem;
 }
 
 #projects h2{
     margin-top:0;
-    margin-bottom:5rem;
+    margin-bottom:4rem;
 }
 
 .divider-line{
@@ -248,11 +271,16 @@ label{
 
 .project-role{
     font-weight:400;
-    font-size:clamp(.8rem, 2vw, 1rem);
+    font-size:clamp(.5rem, 2vw, 1rem);
 }
 
 .project-details .project-role{
     margin-left:.5rem;
+}
+
+.project-details,
+.project-date{
+    font-size:clamp(1.25rem, 4vw, 2.25rem);
 }
 
 .project-accordion label:hover{
@@ -310,6 +338,10 @@ label{
     justify-content: space-between;
 }
 
+.content-text p{
+    width:clamp(25ch, 95%, 75ch);
+}
+
 .content-image{
     grid-area:img;
     width: 100%;
@@ -354,32 +386,47 @@ label{
 
     grid-template-areas: 
     "img img img img linkedin linkedin linkedin email email email email email"
-    "img img img img border-l link-arrow . . email-arrow . . border-r"
+    "img img img img about about about about about about about about"
     "img img img img about about about about about about about about";
+}
+
+.linkedin-button-contact a,
+.email-button-contact a{
+    padding:0;
 }
 
 .linkedin-button-contact{
     grid-area:linkedin;
-    padding:1rem 0;
+    padding:1rem;
 }
 
 .email-button-contact{
     grid-area:email;
     border-left:0px;
-    padding:1rem 0;
+    padding:1rem;
 }
 
 .about-contact{
     grid-area:about;
     border-top:0px;
     padding:1rem;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+.about-contact h3{
+    font-size:clamp(.85rem, 2vw, 2rem);
+    width:clamp(35ch, 85%, 75ch);
+    margin-bottom:2rem;
+    font-weight: 400;
 }
 
 .contact-image{
     grid-area:img;
     border-right:0px;
     padding:0;
-    background-color: #FED60A;
+    background-color:var(--primary);
 }
 
 .contact-image img{
@@ -431,18 +478,18 @@ label{
     align-items:baseline;
     justify-content: space-between;
 
-    border-top:1px solid black;
+    border-top:.5px solid rgba(0,0,0,0.5);
 }
 
 .footer-links{
     padding:1rem 0;
     grid-area:link;
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .footer-links a{
-    font-size:.85rem;
+    font-size:clamp(.6rem, 2vw, .85rem);
     padding:0;
 }
 
@@ -451,5 +498,86 @@ footer h5{
 }
 
 .footer-info p{
-    font-size:.85rem;
+    font-size:clamp(.6rem, 1.5vw, .85rem);
+}
+
+/* CITATIONS ========================================================= */
+
+.citations h3{
+    margin-bottom:.5rem;
+    margin-top:4rem;
+}
+
+.citations li{
+    margin:0;
+    padding-left:2rem;
+}
+
+.citations a{
+    font-weight:400;
+}
+
+/* STYLE GUIDE ========================================================= */
+
+#style-guide-page body{
+    background-color: white;
+}
+
+.colour-wrapper{
+    display:grid;
+    grid-row-gap:1rem;
+    grid-auto-rows: 1fr;
+    width:100%;
+}
+
+.colour-wrapper p{
+    margin:0;
+}
+
+.colour h4{
+    margin:0;
+}
+
+.colour{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding:1rem;
+}
+
+.colour .colour-description{
+    align-content: center;
+    align-items: center;
+}
+
+.gold {
+    background-color:var(--primary);
+    border:1px solid black;
+}
+
+.black{
+    background-color: #000000;
+    color:white;
+}
+
+.typography{
+    /* grid-area:type; */
+}
+
+.typeface a{
+    align-self: flex-start;
+}
+
+.typeface h4{
+    display:inline-block;
+    margin:0;
+}
+
+#style-guide-page a{
+    padding:0;
+}
+
+.interactive-elements a{
+    font-size:clamp(.8rem, 2vw, 1rem);
+    line-height: 140%;
+    font-weight: 400;
 }

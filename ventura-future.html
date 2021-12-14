@@ -3,29 +3,45 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventura Future</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/zng6zgr.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/project-page.css">
+    <link rel="stylesheet" href="css/responsiveness.css">
 
     <link rel="icon" type="image/svg" href="img/favicon.svg" />
 </head>
 
 <body id="projects-page">
+    <header>
+        <div class="main-container">
+        <span><a href="index.html" id="logo">David Baik</a></span>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="footer-info">
+                <div class="copyright">
+                    <p>©David Baik. All rights reserved</p>
+                </div>
+            </div>
+
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        </div>
+     </header>
+
     <section id="project-hero">
         <div class="main-container project-hero-grid">
-
-            <nav class="header-nav">
-                <span><a href="index.html" id="logo">David Baik</a></span>
-                <ul>
-                    <li><a href="index.html#projects">Projects</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-
             <div class="project-thumbnail-wrapper">
-                <img class="project-thumbnail" src="img/ventura-future.gif">
+                <img class="project-thumbnail" src="img/ventura-future.gif" alt="Ventura Future microsite's thumbnail">
             </div>
 
             <div class="nav-arrow"><a href="#projects">
@@ -52,10 +68,18 @@
             <div class="overview-grid">
                 <div class="overview-cell grid-border">
                     <h4>Overview</h4>
-                    <p>Ventura Future is a cultural organization based in Milan whose focus is to highlight and promote
-                        contemporary design and new designers. Designers are urged to apply to be part of the design
-                        exhibitions that are curated by the organization and the exhibitions are held during the annual
-                        Milan Design Week.</p>
+                    <p>Ventura Future is an exhibition curated by the cultural organization Ventura Project based
+                        in Milan, Italy. The Ventura Future exhibition is focused on highlighting and promoting
+                        contemporary design and new design talents. Designers are urged to apply to be a part of the
+                        exhibition that's held during the annual Milan Design Week to share their work and ideas that'll
+                        drive the future culture and direction of design.
+                    </p>
+
+                    <p>
+                        The information from the previous exhibition centers around the microsite's main interaction
+                        in the form of an infinite scroll that navigates through the content and ultimately to the
+                        application form.
+                    </p>
                 </div>
 
                 <div class="roles-cell grid-border">
@@ -65,11 +89,11 @@
 
                 <div class="team-cell grid-border">
                     <h4>Team</h4>
-                    <a href="http://joannalee.ca" target="_blank">Joanna Lee</a>
+                    <a href="http://joannalee.ca" target="_blank">Joanna</a>
                     <p> + </p>
-                    <a href="http://jonathanchoi.ca" target="_blank">Jonathan Choi</a>
+                    <a href="http://jonathanchoi.ca" target="_blank">Jonathan</a>
                     <p> + </p>
-                    <p>Chloe Velasquez</p>
+                    <p>Chloe</p>
                 </div>
 
                 <div class="project-length-cell grid-border">
@@ -102,23 +126,23 @@
                         <source src="video/ventura-future-walkthrough.mp4" type="video/mp4">
                     </video>
                 </div>
-                <p>Prototype of microsite</p>
+                <p>Prototype of microsite (Demo)</p>
             </div>
 
-            <div class="deliverable-2">
+            <figure class="deliverable-2">
                 <img class="deliverable-2-img" src="img/ventura-future-lanyards.png" alt="ventura future lanyards">
-                <p>Lanyards</p>
-            </div>
+                <figcaption>Lanyards</figcaption>
+            </figure>
 
-            <div class="deliverable-3">
+            <figure class="deliverable-3">
                 <img class="deliverable-3-img" src="img/ventura-future-totebag.png" alt="ventura future totebag">
-                <p>Totebag</p>
-            </div>
+                <figcaption>Totebag</figcaption>
+            </figure>
 
-            <div class="deliverable-4">
+            <figure class="deliverable-4">
                 <img class="deliverable-4-img" src="img/ventura-future-posters.png" alt="ventura future totebag">
-                <p>Poster Campaign</p>
-            </div>
+                <figcaption>Poster Campaign</figcaption>
+            </figure>
         </div>
     </section>
 
@@ -128,31 +152,285 @@
                 <div class="accordion-wrapper">
                     <input type="checkbox" name="project-accordion" id="design-process" class="accordion-input">
                     <label for="design-process" class="accordion-label">
-                        <h3>Design Process</h3>
-                        <h3 class="accordion-indicator">+</h3>
+                        Design Process
+                        <span class="accordion-indicator">+</span>
                     </label>
 
                     <div class="divider-line"></div>
 
                     <div class="accordion-content">
-                        <div class="content-grid">
-                            <div class="content">
-                                <div class="content-text">
+                        <section class="design-overview">
+                            <h3>Design Overview</h3>
+                            <p>
+                                Ventura Future is an exhibition and platform created to promote and create equal
+                                opportunities for emerging, independent, and established designers alike.
+                                As part of the cultural organization Ventura Projects based in Milan, Italy Ventura
+                                Future partakes annually during the Milan Design Week to showcase the latest
+                                developments and forefront of contemporary design.
+                            </p>
+
+                            <p>
+                                Our team was projected to uncover points of <b class="highlight">Intervention</b> for
+                                Ventura Future and address these touchpoints through creating appropriate
+                                <b class="highlight">Graphic and Digital Assets</b> for the exhibition.
+                            </p>
+                        </section>
+
+                        <section class="dan-friedman">
+                            <h3>Dan Friedman</h3>
+
+                            <div class="dan-friedman-grid">
+                                <div class="dan-friedman-info">
                                     <p>
-                                        Ventura Future is a cultural organization based in Milan whose focus is to
-                                        highlight and
-                                        promote contemporary design and new designers. As Ventura Future relies on
-                                        applicant
-                                        participation for the exhibitions to exist, this microsite aims to incentivize
-                                        prospective exhibitors to register. Past data from the 2019 event is showcased
-                                        to give
-                                        credibility to the organization and promote the benefits of the 2020 exhibition.
+                                        Prior to beginning the project, our team took the time to study the radical
+                                        modernist, Dan Friedman to motivate our <b class="highlight">Visual Design</b>.
+                                        This foundation gave our approach the fundamental principles and influence in
+                                        creating timeless work.
                                     </p>
+
+                                    <P>
+                                        The key principles from Dan Friedman that influenced our project include:
+                                    </P>
+
+                                    <ol>
+                                        <li>Use of Combination Grids</li>
+                                        <li>Energy Created Through Scale and Orientation</li>
+                                        <li>Reversible Figure Ground Motifs</li>
+                                        <li>Varying Use of Typographic Alignment</li>
+                                    </ol>
+                                </div>
+
+                                <div class="dan-friedman-work">
+                                    <img src="img/dan-friedman-work.png"
+                                        alt="Dan Friedman's work that influenced our approach and process">
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="graphic-experimentation">
+                            <h3>Graphic Experimentation</h3>
+
+                            <p>
+                                Taking the context of Dan Friedman's design principles and the Ventura Future
+                                exhibition, our team experimented graphically to create a <b class="highlight">Design
+                                    System</b> and art direction in the form of sketchbooks, totebags, and posters.
+                            </p>
+
+                            <div class="experimentation-grid">
+                                <figure class="posters">
+                                    <img class="experiment-poster" src="img/ventura-future-experiment.jpg"
+                                        alt="ventura future lanyards">
+                                    <figcaption>Poster Direction Iterations</figcaption>
+                                </figure>
+
+                                <figure class="totebag-1">
+                                    <img class="experiment-totebag-1" src="img/ventura-future-totebag1.png"
+                                        alt="ventura future totebag">
+                                </figure>
+
+                                <figure class="totebag-2">
+                                    <img class="experiment-totebag-2" src="img/ventura-future-totebag2.png"
+                                        alt="ventura future totebag">
+                                    <figcaption>Totebag Direction Iterations</figcaption>
+                                </figure>
+
+                                <figure class="totebag-3">
+                                    <img class="experiment-totebag-3" src="img/ventura-future-totebag3.png"
+                                        alt="ventura future totebag">
+                                </figure>
+
+                                <figure class="sketchbook-1">
+                                    <img class="experiment-sketchbook-1" src="img/ventura-future-sketchbook1.png"
+                                        alt="ventura future sketchbook iteration direction 1">
+                                </figure>
+
+                                <figure class="sketchbook-2">
+                                    <img class="experiment-sketchbook-2" src="img/ventura-future-sketchbook2.png"
+                                        alt="ventura future sketchbook iteration direction 2">
+                                    <figcaption>Sketchbook Direction Iterations</figcaption>
+                                </figure>
+
+                                <figure class="sketchbook-3">
+                                    <img class="experiment-sketchbook-3" src="img/ventura-future-sketchbook3.png"
+                                        alt="ventura future sketchbook iteration direction 3">
+                                </figure>
+
+                            </div>
+                        </section>
+
+                        <section class="graphic-assets">
+                            <h3>Graphic Assets</h3>
+
+                            <p>
+                                Following the critique session of the graphic investigation, our team iterated one
+                                final time to land on a direction that combined the principles that were working out
+                                while dropping the ones that weren't to create an <b class="highlight">appropriate system</b> for the exhibition.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    The 4 colours were used to represent the 4 themes of exhibitors that existed at
+                                    Ventura
+                                    Future 2019:
+
+                                    <ol>
+                                        <li>Craft - Violet</li>
+                                        <li>Tech - Blue</li>
+                                        <li>Food - Yellow</li>
+                                        <li>Academy - Green</li>
+                                    </ol>
+                                </li>
+
+                                <li>Type was scaled and oriented to create energetic and dynamic figure ground layouts.
+                                </li>
+
+                                <li>The negative spaces created from the figure-ground was used to hold content or the
+                                    thematical colours.</li>
+                            </ul>
+
+                            <p>
+                                Additionally, the graphic asset items were swapped from the sketchbook to the lanyard
+                                because of the lanyards' bigger touchpoint with the visitors – creating more impact and
+                                value for the organization.
+                            </p>
+
+                            <div class="graphic-assets-grid">
+                                <figure class="deliverable-2">
+                                    <img class="deliverable-2-img" src="img/ventura-future-lanyards.png"
+                                        alt="ventura future lanyards">
+                                    <figcaption>Lanyards</figcaption>
+                                </figure>
+
+                                <figure class="deliverable-3">
+                                    <img class="deliverable-3-img" src="img/ventura-future-totebag.png"
+                                        alt="ventura future totebag">
+                                    <figcaption>Totebag</figcaption>
+                                </figure>
+
+                                <figure class="deliverable-4">
+                                    <img class="deliverable-4-img" src="img/ventura-future-posters.png"
+                                        alt="ventura future totebag">
+                                    <figcaption>Poster Campaign</figcaption>
+                                </figure>
+                            </div>
+                        </section>
+
+                        <section class="intervention">
+                            <h3>Intervention</h3>
+                            <p>
+                                There were many points of intervention that could be made for the microsite, but our
+                                team decided to intervene at the <b class="highlight">pre-purchase point</b> and
+                                encourage applications rom designers for the upcoming Ventura Future. This decision was
+                                made to <b class="highlight">align with the organization's main goal</b> of
+                                supporting and creating opportunities for emerging talent as the future of design
+                                culture.
+                            </p>
+
+                            <p>
+                                With this goal in mind, our intervention proposed to project the the benefits of
+                                participating in Ventura Future with the microsite to <b class="highlight">promote
+                                    applications</b> and
+                                increase engagement for the prospective exhibiting designers of the 2020 Ventura Future
+                                event.
+                            </p>
+                        </section>
+
+                        <section class="microsite">
+                            <h3>Microsite</h3>
+                            <p>
+                                Prior to designing the microsite, our team decided to narrow down on the Dan Friedman
+                                principles for the direction of the digital asset.
+                            </p>
+
+                            <p>
+                                We decided to focus on second and third principle as the key driving factors of the
+                                microsite's <b class="highlight">Visual Design</b> to adapt to the new digital medium as
+                                a website.
+                            </p>
+                            <ol>
+                                <li class="fade">Use of Combination Grids</li>
+                                <li>Energy Created Through Scale and Orientation</li>
+                                <li>Reversible Figure Ground Motifs</li>
+                                <li class="fade">Varying Use of Typographic Alignment</li>
+                            </ol>
+
+                            <p>
+                                The microsite uses past data from the 2019 exhibition to give prospective designers a
+                                sense of the opportunity and benefits they open themselves up to by participating at the
+                                exhibition. A shade of black and tint of white was used for the entire microsite to keep
+                                the prestigious and elegant character of Ventura Future.
+                            </p>
+                        </section>
+
+                        <section class="interaction">
+                            <h3>Interaction</h3>
+                            <p>
+                                An infinite scroll acts as the microsite's main interaction for users to navigate
+                                through the page's content.
+                            </p>
+
+                            <div class="interaction-gif-grid">
+                                <div class="interaction-gif-wrapper">
+                                    <img class="ventura-future-interaction-gif" src="img/ventura-future-landing.gif"
+                                        alt="Microsite loading numbers from the 2019 Ventura Future as the landing page animation">
+                                    <p>
+                                        The microsite loads into decoding numbers that are significant to the previous
+                                        year's Ventura Future exhibition. Once the numbers are loaded, visitors are
+                                        prompted to scroll down through the scroll indicator.
+                                    </p>
+                                </div>
+
+                                <div class="interaction-gif-wrapper">
+                                    <img class="ventura-future-interaction-gif"
+                                        src="img/ventura-future-progress-bar.gif"
+                                        alt="Microsite's progress bar that serves as highlighting the relevant numbers from Ventura Future 2019 as well as keeping track of how far there's left to scroll on the page">
+                                    <p>
+                                        As the page scrolls, the progress bar highlights the significant numbers from
+                                        the previous year's exhibition as the numbers are explained by the content on
+                                        the right.
+                                    </p>
+                                </div>
+
+                                <div class="interaction-gif-wrapper">
+                                    <img class="ventura-future-interaction-gif"
+                                        src="img/ventura-future-infinite-scroll.gif"
+                                        alt="Microsite's infinite scroll interaction">
+                                    <p>
+                                        At the end of the scroll is a call to action which gives the
+                                        visitors access to the application page on the main Ventura Projects site.
+                                    </p>
+                                    <a href="#deliverables">Click here to view the full demo.</a>
                                 </div>
                             </div>
 
-                            <img class="content-image" src="img/ventura-future.gif">
-                        </div>
+                        </section>
+
+                        <section class="retrospective">
+                            <h3>Retrospective</h3>
+                            <p>
+                                Through this project, I was able to learn 3 important lessons.
+                            </p>
+                            <p>
+                                The first was the <b class="highlight">importance of semantics and context</b> in the work we create. Having
+                                content strategy was crucial for driving the process to strive in creating meaningful
+                                works.
+                            </p>
+                            <p>
+                                The second reflection is the <b class="highlight">difference and relationship between graphic design and
+                                interaction design</b>. Although having our foundation in graphic design immensely helped us
+                                get going, when in the process of transferring the graphic asset qualities to the
+                                digital asset, we realized that the principles we practiced didn't fully translate over
+                                to the visual design of the interactions as simply as we implicitly thought it would be.
+                            </p>
+                            <p>
+                                And finally, the third lesson I learned was the importance of <b class="highlight">design history and fundamental principles</b> in
+                                design. Through studying our precedent designer, Dan Friedman, I was able to grasp the
+                                freedom that comes from having solid principles. Previously, I had the misconception
+                                that having regulations would be restricting, but now I embrace having systems for
+                                working.
+                            </p>
+                        </section>
+
                         <div class="divider-line"></div>
                     </div>
                 </div>
@@ -201,9 +479,9 @@
             </div>
 
             <div class="footer-links">
-                <a href="style-guide.html">Style Guide</a>
+                <!-- <a href="style-guide.html">Style Guide</a> -->
                 <a href="#project-hero">Back to top</a>
-                <a href="citations.html">Citations</a>
+                <!-- <a href="citations.html">Citations</a> -->
             </div>
         </div>
     </footer>

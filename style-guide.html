@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Style Guide</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/zng6zgr.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/style-guide.css">
+    <link rel="stylesheet" href="css/project-page.css">
+    <link rel="stylesheet" href="css/responsiveness.css">
 
-    <link rel="icon" type="image/svg" href="img/favicon.svg"/>
+    <link rel="icon" type="image/svg" href="img/favicon.svg" />
 </head>
+
 <body id="style-guide-page">
     <header>
         <div class="main-container">
-            <nav class="header-nav">
-                <span><a href="index.html" id="logo">David Baik</a></span>
+            <span><a href="index.html" id="logo">David Baik</a></span>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
                 <ul>
                     <li><a href="index.html#projects">Projects</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
+
+                <div class="footer-info">
+                    <div class="copyright">
+                        <p>©David Baik. All rights reserved</p>
+                    </div>
+                </div>
+
             </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
         </div>
     </header>
 
@@ -28,37 +43,62 @@
             <h1>Style Guide</h1>
 
             <div class="style-guide-grid">
-                <div class="colours">
+                <section class="colours-section">
                     <h2>Colours</h2>
-                    <div class="colour-wrapper">
-                        <div class="gold">
-                            <p>#FED60A</p>
-                        </div>
-                        <p>rgb(254,214,10)</p>
-                    </div>
 
                     <div class="colour-wrapper">
-                        <div class="black">
-                            <p>#000000</p>
+                        <div class="colour gold">
+                            <div class="colour-info">
+                                <h4>Deep Yellow</h4>
+                                <p>#FED60A</p>
+                            </div>
+                            <p>A deep yellow was chosen as the primary colour for the portfolio to represent enthusiasm
+                                and
+                                energy. It's the main characteristic element of the portfolio.
+                            </p>
                         </div>
-                        <p>rgb(0,0,0)</p>
-                    </div>
-                </div>
 
-                <div class="typography">
+
+                        <div class="colour black">
+                            <div class="colour-info">
+                                <h4>Black</h4>
+                                <p>#000000</p>
+                            </div>
+                            <p>Black is used for the text content of the portfolio to be legible on the brighter yellow
+                                background.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="typography">
                     <h2>Typeface</h2>
                     <div class="typeface">
                         <a href="https://www.daltonmaag.com/library/aktiv-grotesk" target="_blank">
-                            <h3>Aktiv Grotesk</h3>
+                            <h4>Aktiv Grotesk</h4>
                         </a>
-
-
+                        <p>Aktiv Grotesk was used to convey a sense of composure and professionalism with its swiss
+                            typography roots as being authoritative, but neutral - a good typeface to represent the
+                            diverse capabilities and flexibilities a UX designer would need.</p>
                     </div>
-                </div>
+                </section>
+
+                <section class="interactive">
+                    <h2>Interactive Elements</h2>
+                    <div class="interactive-elements">
+                        <p><a href="#">Interactive Elements</a> and <a href="#">Links</a> become <i>italicized</i> when
+                            hovered.</p>
+                        <p>This was done keep a consistent swiss look throughout the portfolio without having anything
+                            overpower the content.</p>
+                        <p>For mobile where hover interactions aren't possible, the links and interactive elements have
+                            been labeled in other ways to indicate their being and function through text. (ie. higher
+                            hierarchy, "click here to...", grouped with other clickable elements, etc)</p>
+                    </div>
+                </section>
             </div>
         </div>
     </section>
-    
+
     <footer class="main-footer">
         <div class="main-container">
             <div class="footer-info">
@@ -84,4 +124,5 @@
     </footer>
 
 </body>
+
 </html>

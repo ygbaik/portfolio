@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citations</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/zng6zgr.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/citations.css">
+    <link rel="stylesheet" href="css/project-page.css">
+    <link rel="stylesheet" href="css/responsiveness.css">
 
     <link rel="icon" type="image/svg" href="img/favicon.svg" />
 </head>
@@ -15,15 +17,26 @@
 <body id="style-guide-page">
     <header>
         <div class="main-container">
-            <nav class="header-nav">
-                <span><a href="index.html" id="logo">David Baik</a></span>
-                <ul>
-                    <li><a href="index.html#projects">Projects</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <span><a href="index.html" id="logo">David Baik</a></span>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="footer-info">
+                <div class="copyright">
+                    <p>©David Baik. All rights reserved</p>
+                </div>
+            </div>
+
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
         </div>
-    </header>
+     </header>
 
     <section id="style-guide">
         <div class="main-container">
@@ -53,6 +66,7 @@
                 <h3>Tutorials</h3>
                 <li><a href=https://www.youtube.com/watch?v=U9VF-4euyRo&ab_channel=KevinPowell target="_blank">Min, Max,
                         Clamp: Responsive Fonts</a></li>
+                <li><a href=https://www.youtube.com/watch?v=pzy_QStQaqA&ab_channel=dcode target="_blank">CSS only accordion</a></li>
             </div>
         </div>
         </div>

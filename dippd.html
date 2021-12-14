@@ -3,27 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dipp'd</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/zng6zgr.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/project-page.css">
+    <link rel="stylesheet" href="css/responsiveness.css">
 
     <link rel="icon" type="image/svg" href="img/favicon.svg" />
 </head>
 
 <body id="projects-page">
+    <header>
+        <div class="main-container">
+        <span><a href="index.html" id="logo">David Baik</a></span>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="footer-info">
+                <div class="copyright">
+                    <p>©David Baik. All rights reserved</p>
+                </div>
+            </div>
+
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        </div>
+     </header>
+
     <section id="project-hero">
         <div class="main-container project-hero-grid">
-
-            <nav class="header-nav">
-                <span><a href="index.html" id="logo">David Baik</a></span>
-                <ul>
-                    <li><a href="index.html#projects">Projects</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-
             <div class="project-thumbnail-wrapper">
                 <img class="project-thumbnail" src="img/dippd.gif" alt="project thumbnail gif image">
             </div>
@@ -41,7 +57,7 @@
             <div class="overview-title">
                 <div class="project-details">
                     <h3>Dipp'd</h3>
-                    <p>(UX + front-end project, ecommerce website)</p>
+                    <p>(UX + front-end project, website)</p>
                 </div>
 
                 <div class="project-date">
@@ -71,9 +87,9 @@
 
                 <div class="team-cell grid-border">
                     <h4>Team</h4>
-                    <a href="http://joannalee.ca" target="_blank">Joanna Lee</a>
+                    <a href="http://joannalee.ca" target="_blank">Joanna</a>
                     <p> + </p>
-                    <a href="http://jonathanchoi.ca" target="_blank">Jonathan Choi</a>
+                    <a href="http://jonathanchoi.ca" target="_blank">Jonathan</a>
                 </div>
 
                 <div class="project-length-cell grid-border">
@@ -144,7 +160,7 @@
                             </p>
 
                             <p>
-                                With their brick and mortar store already having been established, Dipp'd is looking to
+                                With their brick-and-mortar store already having been established, Dipp'd is looking to
                                 scale their shop and reach a larger audience through creating an online platform for
                                 their
                                 customers to have easier access to pickup and delivery.
@@ -174,15 +190,15 @@
                                         <b class="highlight">Usability Tests</b> with individuals of varying ages from
                                         20 to 60.
                                     </p>
-                                    <p>A few of the precedent websites and companies we conducted our research include:
+                                    <p>A few of the precedent websites and companies that we conducted in our research include:
                                     </p>
-                                    <ol>
+                                    <ul>
                                         <li><a href="https://49thcafe.com/" target="_blank">49th Cafe</a></li>
                                         <li><a href="https://cartems.com/" target="_blank">Cartems</a></li>
                                         <li><a href="https://eatnuggs.com/" target="_blank">Nuggs</a></li>
                                         <li><a href="https://simplychocolate.dk/" target="_blank">Simply Chocolate</a>
                                         </li>
-                                    </ol>
+                                    </ul>
                                 </div>
 
 
@@ -200,7 +216,7 @@
                                 <div class="art-direction-info">
                                     <p>
                                         As a result, our team was able to create a balanced solution that addressed both
-                                        the client and visitors's pain points. We iterated in a few direction before
+                                        the client and visitors' pain points. We iterated in a few directions before
                                         landing on an <b class="highlight">Art Direction</b> that embraces both bold and
                                         expressive nature of the brand and their customers to meet the client's goal of
                                         a cohesive experience in-store and online.
@@ -215,7 +231,7 @@
                         <section class="design-system">
                             <h3>Design System</h3>
                             <p>
-                                Colour was implemented in a <b class="highlight">Systematical</b> manner to categorize
+                                Colour was implemented in a <b class="highlight">Systematic</b> manner to categorize
                                 the different types of
                                 pages and functions on the website.
                             </p>
@@ -229,7 +245,6 @@
                                 <li><b>Magenta:</b> Tints and shades of magenta were for the pages relating to the actual
                                     product of the client such as the Shop and Order Review pages.</li>
                             </ul>
-                            </p>
 
                             <p>
                                 A pattern library was created to aid the team during the development process and help
@@ -257,9 +272,7 @@
                                         </p>
                                     </div>
 
-                                    <video autoplay loop>
-                                        <source src="video/dippd-landing.mp4" type="video/mp4">
-                                    </video>
+                                    <img class="project-gif" src="img/dippd-landing.gif" alt="Gif of landing page animation for Dipp'd">
                                 </div>
 
                                 <div class="interactions-flex">
@@ -273,9 +286,7 @@
                                         </p>
                                     </div>
 
-                                    <video autoplay loop>
-                                        <source src="video/dippd-carousel.mp4" type="video/mp4">
-                                    </video>
+                                    <img class="project-gif" src="img/dippd-carousel.gif" alt="Gif of social media post carousel on Dipp'd home page">
                                 </div>
 
                                 <div class="interactions-flex">
@@ -288,9 +299,7 @@
                                         </p>
                                     </div>
 
-                                    <video autoplay loop>
-                                        <source src="video/dippd-shop.mp4" type="video/mp4">
-                                    </video>
+                                    <img class="project-gif" src="img/dippd-shop.gif" alt="Gif of Dipp'd shop product interaction">
                                 </div>
                             </div>
                         </section>
@@ -299,7 +308,7 @@
                             <h3>Reflection</h3>
                             <p>
                                 Not only did this project teach me the hard skills of <b class="highlight">front-end web
-                                    development</b>, it gave
+                                    development</b>, but it also gave
                                 me a <b class="highlight">new perspective</b> and understanding which I consider very
                                 valuable as a UX designer.
                                 Having a diverse understanding and awareness of different people's frameworks will help
@@ -364,9 +373,9 @@
             </div>
 
             <div class="footer-links">
-                <a href="style-guide.html">Style Guide</a>
+                <!-- <a href="style-guide.html">Style Guide</a> -->
                 <a href="#project-hero">Back to top</a>
-                <a href="citations.html">Citations</a>
+                <!-- <a href="citations.html">Citations</a> -->
             </div>
         </div>
     </footer>
