@@ -51,15 +51,17 @@ p{
 }
 
 a{
+    display:inline-block;
     text-decoration: none;
     color:black;
     font-weight:500;
     font-size:clamp(.8rem, 2vw, 1.5rem);
     padding:1rem 1.5rem;
+    transition: transform 300ms ease-out;
 }
 
 a:hover{
-    font-style: italic;
+    transform: skewX(-10deg);
 }
 
 .arrow-hover{
@@ -68,7 +70,7 @@ a:hover{
 }
 
 .arrow-hover:hover{
-    transform:skewX(-15deg);
+    transform:skewX(-10deg);
 }
 
 span{
@@ -283,8 +285,13 @@ label{
     font-size:clamp(1.25rem, 4vw, 2.25rem);
 }
 
+.project-accordion label{
+    transition: transform 300ms ease-out;
+}
+
 .project-accordion label:hover{
-    font-style:italic;
+    transform:skewX(-10deg);
+    /* font-style:italic; */
 }
 
 .project-accordion{
@@ -355,14 +362,28 @@ label{
     border:1px solid black;
 }
 
+.project-nav-button:hover{
+    transform: skewX(0);
+}
+
 .project-nav-button p{
     margin:0;
+    transition:transform 300ms ease;
+}
+
+.project-nav-button:hover p{
+    transform:skewX(-10deg);
 }
 
 .project-page-nav{
     transform: rotate(-135deg);
     height:15px;
     margin-left:.5rem;
+    transition:transform 300ms ease;
+}
+
+.project-nav-button:hover .project-page-nav{
+    transform: rotate(-135deg) skewX(-5deg);
 }
 
 

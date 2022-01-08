@@ -599,12 +599,11 @@ ol li:before{
 }
 
 .next-project .arrow-hover{
-    transition: transform 25ms linear;
+    transition: transform 300ms ease;
 }
 
 .next-project:hover .arrow-hover{
-    transform:rotate(270deg) skewY(10deg);
-    /* transform:scaleY(.1); */
+    transform:rotate(270deg) skewY(5deg);
 }
 
 .project-footer .main-container{
